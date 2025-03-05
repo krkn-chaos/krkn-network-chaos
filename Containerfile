@@ -3,4 +3,4 @@ RUN dnf update -y && dnf install --setopt=install_weak_deps=False -y iproute-tc 
 
 
 
-ENTRYPOINT ["/bin/bash", "sleep infinity"]
+ENTRYPOINT ["/usr/bin/sleep" , "infinity"]
