@@ -17,7 +17,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -f Containerfile --no-cache -t quay.io/krkn-chaos/krkn-network-chaos:latest .
-          docker tag quay.io/krkn-chaos/krkn-hog:latest quay.io/krkn-chaos/krkn-network-chaos:${GITHUB_REF##*/}
+          docker tag quay.io/krkn-chaos/krkn-network-chaos:latest quay.io/krkn-chaos/krkn-network-chaos:${GITHUB_REF##*/}
       - name: Login in quay
         run: docker login quay.io -u ${QUAY_USER} -p ${QUAY_TOKEN}
         env:
